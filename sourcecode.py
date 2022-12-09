@@ -3,9 +3,13 @@ import json
 import spotipy
 from IPython.display import Image, display
 from pprint import pprint
+from getpass import getpass
 
-sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id="02633e8b7f0e43a2bf16882a47f72f55",
-                                                           client_secret="e8d29c15040049bc94a0b1c488aa3ae6"))
+Client_ID = getpass("Please input your client_id:") 
+Client_Secret = getpass("Please input your client_secret")
+
+sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id="Client_ID",
+                                                           client_secret="Client_Secret"))
 
 print("This program will return the danceability of a track given a user input")
 

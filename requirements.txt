@@ -13,6 +13,7 @@ sendgrid==6.6.0
 flask
 gunicorn # <--- UNCOMMENT FOR HEROKU DEPLOY
 
+spotipy
 
 # using this to find and run our tests:
 pytest

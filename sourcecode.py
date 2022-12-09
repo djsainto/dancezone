@@ -9,8 +9,8 @@ from getpass import getpass
 Client_ID = getpass("Please input your client_id:") 
 Client_Secret = getpass("Please input your client_secret")
 
-sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id="Client_ID",
-                                                           client_secret="Client_Secret"))
+sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=Client_ID,
+                                                           client_secret=Client_Secret))
 
 print("This program will return the danceability of a track given a user input")
 

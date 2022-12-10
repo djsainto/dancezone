@@ -9,19 +9,11 @@ from getpass import getpass
 Client_ID = getpass("Please input your client_id:") 
 Client_Secret = getpass("Please input your client_secret")
 
-sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=Client_ID,
-                                                           client_secret=Client_Secret))
+sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=Client_ID, client_secret=Client_Secret))
 
 print("This program will return the danceability of a track given a user input")
 
-while True:
-    print("  ")
-    print("0 - Exit the console")
-    print("1 - Search for a Song")
-    print("  ")
-    user_input = int(input("Enter Your Choice: "))
-    print("  ")
-    if user_input == 1:
+def dancezone(search_song, track_number):
         search_song = input("Enter the song name: ")
         print("  ")
         results = sp.search(search_song, 10)
@@ -65,19 +57,11 @@ while True:
           print("Here is the analyzed song url:")
           print(song)
         if danceability + valence >= 120 and danceability >=60:
-          print(" ")
-          print("This song is would be good to play for a party!")
+          output = "This song is would be good to play for a party!"
         if 120 > danceability + valence >= 90 and danceability >=60:
-          print(" ")
-          print("This song is would be ok to play at a party, but other options might be better.")
+          output = "This song is would be ok to play at a party, but other options might be better."
         if 90> danceability + valence >= 60 and danceability >=60:
-          print(" ")
-          print("This song is not a great choice for a party. A happier song would be better.")
+          output = "This song is not a great choice for a party. A happier song would be better."
         if 60 > danceability:
-          print(" ")
-          print("This song is not a great choice for a party. A more upbeat, danceable song would be better.")
-    elif user_input == 0:
-        print("Good Bye, Have a great day!")
-        break
-    else:
-        print("Please enter valid user-input.")
+          output = "This song is not a great choice for a party. A more upbeat, danceable song would be better."
+      return output

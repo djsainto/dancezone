@@ -11,7 +11,7 @@ def fetch_search_data(search_song):
         return items
 
 def fetch_song_data(track_number, items):
-        track_info = items[int(track_number)-1]
+        track_info = items[0]
         song = track_info['external_urls']['spotify']
         cover_url = track_info['album']['images'][1]['url']
         analysis = sp.audio_features(song)
@@ -25,4 +25,4 @@ def fetch_song_data(track_number, items):
           output = "This song is not a great choice for a party. A happier song would be better."
         if 60 > danceability:
           output = "This song is not a great choice for a party. A more upbeat, danceable song would be better."
-        return output, danceability, valence
+        return output

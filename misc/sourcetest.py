@@ -6,8 +6,8 @@ from IPython.display import Image, display
 from pprint import pprint
 from getpass import getpass
 
-Client_ID = getpass("Please input your client_id:") 
-Client_Secret = getpass("Please input your client_secret")
+Client_ID = "02633e8b7f0e43a2bf16882a47f72f55"
+Client_Secret = "e8d29c15040049bc94a0b1c488aa3ae6"
 
 sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=Client_ID, client_secret=Client_Secret))
 

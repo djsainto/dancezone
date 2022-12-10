@@ -4,9 +4,9 @@ import os
 from dotenv import load_dotenv
 from flask import Flask
 
-from web_app.routes.interface import interface
-from web_app.routes.number import number
-from web_app.routes.output import output
+from web_app.routes.interface_route import interface
+from web_app.routes.numbers_route import number
+from web_app.routes.output_route import output
 
 #load_dotenv()
 

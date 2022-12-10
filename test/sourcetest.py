@@ -17,7 +17,6 @@ def dancezone(search_song, track_number):
         search_song = input("Enter the song name: ")
         print("  ")
         results = sp.search(search_song, 10)
-
         print("There are many tracks with that name attributed to different albums and artists. Here is a list of the top 10.")
         print("  ")
         items = results['tracks']['items']

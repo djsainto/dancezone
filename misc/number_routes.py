@@ -1,6 +1,6 @@
 from flask import Blueprint, request, render_template, redirect, flash
 
-from app.dance import fetch_search_data, # commands for turning data into 10 tracks
+from app.dance import fetch_search_data # commands for turning data into 10 tracks
 
 number_routes = Blueprint("number_routes", __name__)
 

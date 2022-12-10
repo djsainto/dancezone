@@ -3,22 +3,22 @@
 import os
 from dotenv import load_dotenv
 from flask import Flask
-
-from web_app.routes.interface_route import interface
-from web_app.routes.numbers_route import number
-from web_app.routes.output_route import output
+from web_app.routes.music_routes import music_routes
 
 #load_dotenv()
 
-#SECRET_KEY = os.getenv("SECRET_KEY", default="super secret") # set this to something else on production!!!
+load_dotenv()
+
+Client_ID = os.getenv("Client_ID")
+Client_Secret = os.getenv("Client_Secret")
 
 def create_app():
     app = Flask(__name__)
-   # app.config["SECRET_KEY"] = SECRET_KEY
+    app.config["Client_ID"] = Client_ID
+    app.config["Client_Secret"] = Client_Secret
 
-    app.register_blueprint(interface)
-    app.register_blueprint(number)
-    app.register_blueprint(output)
+
+    app.register_blueprint(music_routes)
    
     return app
 

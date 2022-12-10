@@ -10,7 +10,7 @@ def fetch_search_data(search_song):
         items = results['tracks']['items']
         return items
 
-def fetch_song_data(track_number, items):
+def fetch_song_data(items):
         track_info = items[0]
         song = track_info['external_urls']['spotify']
         cover_url = track_info['album']['images'][1]['url']

@@ -38,7 +38,7 @@ pytest
 
 ### Web App
 
-Run the web app (then view in the browser at http://localhost:5000/):
+Run the web app (then view in the browser at http://localhost:5000/music/form):
 
 ```sh
 # Mac OS:

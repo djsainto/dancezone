@@ -22,10 +22,10 @@ client_id="___________________"
 client_secret="___________________"
 ```
 
-Run DanceZone:
+Run DanceZone's source code:
 
 ```sh
-python app/sourcecode.py
+python -m misc.sourcecode
 ```
 
 ## Testing
